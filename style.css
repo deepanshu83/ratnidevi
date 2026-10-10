@@ -232,7 +232,7 @@ textarea {
 
 .hero {
   position: relative;
-  padding: 70px 0 34px;
+  padding: 34px 0 26px;
   overflow: hidden;
 }
 
@@ -270,6 +270,11 @@ textarea {
   align-items: center;
 }
 
+.hero-grid {
+  grid-template-columns: 1.08fr 0.92fr;
+  gap: 42px;
+}
+
 .hero-copy h1,
 .section-copy h2,
 .section-heading h2,
@@ -277,40 +282,12 @@ textarea {
   margin: 0;
   font-family: "Playfair Display", serif;
   line-height: 1.08;
-  letter-spacing: -0.03em;
+  letter-spacing: 0;
 }
 
 .hero-copy h1 {
-  font-size: clamp(2.8rem, 5vw, 5rem);
-  max-width: 11ch;
-}
-
-.hero-logo-badge {
-  width: min(220px, 46vw);
-  margin-bottom: 22px;
-  padding: 10px 14px;
-  border-radius: 28px;
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(217, 142, 61, 0.16);
-  box-shadow: 0 18px 40px rgba(16, 35, 61, 0.08);
-  backdrop-filter: blur(14px);
-}
-
-.hero-logo-badge img {
-  width: 100%;
-  height: auto;
-}
-
-.hero-logo-badge {
-  display: grid;
-  place-items: center;
-  width: 84px;
-  height: 84px;
-}
-
-.hero-logo-badge i {
-  color: var(--brand);
-  font-size: 2.2rem;
+  font-size: clamp(2.6rem, 4vw, 3.7rem);
+  max-width: 12ch;
 }
 
 .hero-text,
@@ -323,10 +300,16 @@ textarea {
   line-height: 1.8;
 }
 
+.hero-text {
+  margin: 12px 0 0;
+  font-size: 0.96rem;
+  line-height: 1.65;
+}
+
 .eyebrow {
   display: inline-block;
-  margin: 0 0 16px;
-  padding: 8px 14px;
+  margin: 0 0 12px;
+  padding: 7px 12px;
   border-radius: 999px;
   background: rgba(14, 90, 138, 0.09);
   color: var(--brand);
@@ -339,8 +322,8 @@ textarea {
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  margin: 28px 0;
+  gap: 10px;
+  margin: 20px 0;
 }
 
 .hero-points {
@@ -348,7 +331,7 @@ textarea {
   margin: 0;
   list-style: none;
   display: grid;
-  gap: 12px;
+  gap: 8px;
 }
 
 .hero-points li {
@@ -374,26 +357,35 @@ textarea {
 }
 
 .hero-card {
+  display: grid;
+  justify-items: center;
   overflow: hidden;
-  position: relative;
-  transform: translateY(0);
-  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  backdrop-filter: none;
 }
 
 .hero-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 28px 70px rgba(16, 35, 61, 0.16);
+  transform: none;
+  box-shadow: none;
 }
 
 .hero-image img {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: min(76vh, 620px);
+  max-width: 100%;
   object-fit: contain;
-  background: #e9eef3;
+  border-radius: 12px;
+  box-shadow: 0 22px 52px rgba(16, 35, 61, 0.16);
 }
 
 .hero-image {
   position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
 }
 
 .visual-placeholder {
@@ -554,7 +546,7 @@ textarea {
 }
 
 .section {
-  padding: 88px 0;
+  padding: 68px 0;
 }
 
 .feature-list,
@@ -566,14 +558,14 @@ textarea {
 }
 
 .feature-list {
-  margin-top: 28px;
+  margin-top: 22px;
 }
 
 .feature-card,
 .service-card {
   display: flex;
-  gap: 16px;
-  padding: 22px;
+  gap: 14px;
+  padding: 18px;
 }
 
 .feature-card i,
@@ -715,7 +707,7 @@ textarea {
 }
 
 .service-grid {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 
 .service-card {
@@ -732,8 +724,8 @@ textarea {
 
 .gallery-card img {
   width: 100%;
-  height: 100%;
-  min-height: 280px;
+  height: clamp(180px, 23vh, 240px);
+  min-height: 0;
   object-fit: cover;
   transition: transform 0.5s ease;
 }
@@ -758,8 +750,106 @@ textarea {
 }
 
 .gallery-card figcaption {
-  padding: 16px 18px 20px;
+  padding: 12px 16px 14px;
   color: var(--muted);
+}
+
+@media (min-width: 1025px) and (max-height: 820px) {
+  .header-shell {
+    min-height: 70px;
+  }
+
+  .brand-mark {
+    width: 54px;
+    height: 54px;
+  }
+
+  .hero {
+    padding: 18px 0 14px;
+  }
+
+  .hero-grid {
+    gap: 34px;
+  }
+
+  .hero-copy h1 {
+    font-size: clamp(2.35rem, 3.5vw, 3rem);
+  }
+
+  .hero-actions {
+    margin: 14px 0;
+  }
+
+  .hero-points {
+    gap: 6px;
+  }
+
+  .btn {
+    min-height: 44px;
+    padding: 0 18px;
+  }
+
+  .section {
+    padding: 46px 0;
+  }
+
+  .quick-strip {
+    padding-top: 12px;
+  }
+
+  .quick-grid {
+    gap: 12px;
+  }
+
+  .quick-grid article,
+  .feature-card,
+  .service-card {
+    padding: 15px;
+  }
+
+  .about .feature-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 10px;
+    margin-top: 16px;
+  }
+
+  .about .feature-card {
+    display: block;
+    padding: 12px;
+  }
+
+  .about .feature-card i {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 8px;
+  }
+
+  .panel-image img {
+    height: 170px;
+  }
+
+  .info-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    margin: 14px 0;
+  }
+
+  .care-image {
+    height: min(64vh, 440px);
+  }
+
+  .section-heading {
+    margin-bottom: 20px;
+  }
+
+  .gallery-card img {
+    height: min(25vh, 190px);
+  }
+
+  .contact-map,
+  .contact-map iframe {
+    min-height: 360px;
+  }
 }
 
 .gallery-large {
@@ -932,10 +1022,9 @@ textarea {
     padding-top: 26px;
   }
 
-  .hero-logo-badge {
-    width: min(180px, 58vw);
-    margin-bottom: 18px;
-    padding: 8px 12px;
+  .hero-image img {
+    width: 100%;
+    height: auto;
   }
 
   .doctor-portrait {
