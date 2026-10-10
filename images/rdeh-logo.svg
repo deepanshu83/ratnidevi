@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 150" role="img" aria-labelledby="title">
+  <title id="title">Ratni Devi Eye Hospital logo</title>
+  <g fill="none" stroke="#10233d" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 53C32 27 58 14 90 14s58 13 78 39c-20 26-46 39-78 39S32 79 12 53Z" stroke-width="8"/>
+    <circle cx="90" cy="53" r="20" stroke-width="7"/>
+    <path d="M90 39v28M76 53h28" stroke-width="7"/>
+  </g>
+  <text x="90" y="130" fill="#10233d" font-family="Arial, sans-serif" font-size="27" font-weight="800" text-anchor="middle">RDEH</text>
+</svg>
